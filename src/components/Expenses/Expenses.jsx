@@ -1,10 +1,16 @@
 import "./Expenses.css";
 import ExpenseItem from "./ExpenseItem";
+import ExpensesFilter from "./ExpensesFilter";
 import Card from "../UI/Card"
 
 function Expenses({ expenses }) {
+  const filterExpensesHandler = (year) => {
+    console.log(year)
+  }
   return (
+    <div>
       <Card className="expenses">
+      <ExpensesFilter onFilterExpenses={filterExpensesHandler} />
         <ExpenseItem
           title={expenses[0].title}
           date={expenses[0].date}
@@ -26,6 +32,7 @@ function Expenses({ expenses }) {
           amount={expenses[3].amount}
         />
       </Card>
+      </div>
   );
 }
 
