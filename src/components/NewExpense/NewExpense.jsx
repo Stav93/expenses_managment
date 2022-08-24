@@ -11,6 +11,7 @@ function NewExpense({ onAddExpense }) {
       id: Math.random().toString(),
     };
     onAddExpense(expenseData);
+    setAddingExpense(false);
   };
 
   const addingExpenseHansler = () => {
