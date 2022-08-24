@@ -4,6 +4,7 @@ import "./ExpenseItem.css";
 
 function ExpenseItem({ title, date, amount }) {
   return (
+    <li>
       <Card className="expense-item">
         <ExpenseDate date={date} />
         <div className="expense-item__description">
@@ -11,6 +12,7 @@ function ExpenseItem({ title, date, amount }) {
           <div className="expense-item__price">{amount}</div>
         </div>
       </Card>
+    </li>
   );
 }
 
